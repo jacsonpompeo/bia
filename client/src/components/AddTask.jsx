@@ -59,7 +59,7 @@ const AddTask = ({ onAdd }) => {
       </div>
       
       <button type="submit" className="btn btn-block success">
-        Add New Task
+        Adicionar Tarefa
       </button>
       
       <Modal
@@ -74,3 +74,4 @@ const AddTask = ({ onAdd }) => {
 };
 
 export default AddTask;
+  

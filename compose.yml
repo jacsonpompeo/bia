@@ -4,12 +4,13 @@ services:
     container_name: bia
     ports:
       - 3001:8080
+    restart: unless-stopped
     depends_on:
       - database
     environment:
       DB_USER: postgres
-      DB_PWD: postgres
-      DB_HOST: database
+      DB_PWD: ffXlzZdx9eDWtO7GpftR
+      DB_HOST: bia.cxma2yassuo0.us-east-1.rds.amazonaws.com
       DB_PORT: 5432
       ## NAO PRECISA NO BOOTCAMP DAQUI PRA BAIXO ##
       # DB_SECRET_NAME: 
@@ -25,6 +26,7 @@ services:
     #   retries: 3
     #   start_period: 5s     
   database:
+    restart: unless-stopped
     image: postgres:17.1
     container_name: database
     environment:
